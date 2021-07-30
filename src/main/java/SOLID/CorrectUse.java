@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 public class CorrectUse {
-
+	
+	
+	private int a;
 	
 	public CorrectUse() {
 		
