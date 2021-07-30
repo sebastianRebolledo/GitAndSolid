@@ -7,8 +7,8 @@ import java.util.Iterator;
 public class CorrectUse {
 	
 	
-	private int 
-		b;
+	private int A
+	
 	
 	private HashMap sdaigja;
 	
