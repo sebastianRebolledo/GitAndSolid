@@ -1,6 +1,8 @@
 package SOLID;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 
 public class CorrectUse {
 
@@ -43,6 +45,9 @@ public class CorrectUse {
 	
 	class ShapeDetails{
 		
+		
+		
+		
 		private ArrayList<Shape> shapes;
 		
 		public ShapeDetails() {
@@ -60,9 +65,13 @@ public class CorrectUse {
 		}
 		
 		public void printDetails() {
-			for (Shape shape : shapes) {
 			
-				System.out.println("Area: "+ shape.area + " Perimeter: "+shape.perimeter + " Type: "+shape.getClass().getSimpleName());
+			for (Shape shape : shapes) {
+				
+				
+				shape.getDetails().forEach((k,v) -> System.out.println( k +" : " + v));
+				System.out.println( "Type: "+shape.getClass().getSimpleName());
+				
 			}
 			
 		}
@@ -81,6 +90,7 @@ public class CorrectUse {
 	
 	class Shape {
 		
+		private HashMap<String,Integer> details;
 		
 		
 		
@@ -91,11 +101,14 @@ public class CorrectUse {
 		public Shape( ) {
 			this.area = 0;
 			this.perimeter = 0;
+			this.details = new HashMap();
 			
 		}
 		
-		
-		
+		public HashMap<String,Integer> getDetails(){
+			return this.details;
+			
+		}		
 		
 		
 		
@@ -113,8 +126,11 @@ public class CorrectUse {
 		public Rectangle(int height, int width) {
 			this.height = height;
 			this.width = width;
-			this.area=getArea();
-			this.perimeter=getPerimeter();
+			super.details.put("Area", Integer.valueOf(this.getArea()));
+			super.details.put("Perimeter", Integer.valueOf(this.getPerimeter()));
+			super.details.put("Height", Integer.valueOf(height));
+			super.details.put("Widht", Integer.valueOf(Integer.valueOf(width)));
+			
 		}
 		
 		public int getArea() {
@@ -137,12 +153,18 @@ public class CorrectUse {
 	class Circle extends Shape{
 		
 		int radius;
+		int diameter;
 	
 		
 		public Circle(int radius) {
+			
 			this.radius = radius;
-			this.area=getArea();
-			this.perimeter=getPerimeter();
+			
+			super.details.put("Area", Integer.valueOf(this.getArea()));
+			super.details.put("Radius", Integer.valueOf(radius));
+			super.details.put("Perimeter", Integer.valueOf(this.getPerimeter()));
+			super.details.put("Diameter", Integer.valueOf(this.getDiameter()));
+
 		
 			
 		}
@@ -156,6 +178,11 @@ public class CorrectUse {
 		
 		public int getPerimeter() {
 			return (int)(Math.PI*this.radius*2);
+		}
+		
+		public int getDiameter() {
+			return this.radius*2;
+			
 		}
 		
 		
