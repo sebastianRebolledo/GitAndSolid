@@ -7,7 +7,8 @@ import java.util.Iterator;
 public class CorrectUse {
 	
 	
-	private int a;
+	private int 
+		b;
 	
 	public CorrectUse() {
 		
