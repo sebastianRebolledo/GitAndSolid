@@ -9,7 +9,7 @@ public class CorrectUse {
 	
 	private int 
 		b;
-	
+	kskskskksksksk
 	private HashMap sdaigja;
 	
 	public CorrectUse() {
