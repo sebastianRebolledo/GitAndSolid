@@ -7,12 +7,13 @@ public class Main {
 		Duck a = new Duck("Alexis", 140);
 		a.swim();
 		a.fly(100);
-		a.cuack();
+
+
 		
-		RubberDuck b = new RubberDuck("Mario", null);
-		b.swim();
-		b.cuack();
-		b.fly(100);
+		
+		Crocodile c = new Crocodile("Camilo");
+		c.swim();
+		c.fly(13);
 		
 		
 		

@@ -1,6 +1,6 @@
 package CorrectUse;
 
-public class Duck {
+public class Duck implements ICuack, IFly, ISwim{
 
 	String name;
 	Integer maximumHeight;

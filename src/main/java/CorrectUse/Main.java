@@ -20,6 +20,11 @@ public class Main {
 		b.cuack();
 		
 		
+		
+		Crocodile c = new Crocodile("Camilo");
+		c.swim();
+		
+		
 	}
 
 	public static void main(String[] args) {

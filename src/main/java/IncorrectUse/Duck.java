@@ -1,6 +1,6 @@
 package IncorrectUse;
 
-public class Duck {
+public class Duck implements IFlyAndSwim{
 
 	String name;
 	Integer maximumHeight;
@@ -16,8 +16,13 @@ public class Duck {
 	}
 	
 	
+
+		
 	
-	public void fly (int height) {
+
+	@Override
+	public void fly(int height) {
+		
 		if(Integer.valueOf(height).compareTo(maximumHeight)>0) {
 			System.out.println("Srry, you cannot fly that height");
 		}else if(Integer.valueOf(height).compareTo(Integer.valueOf(0))<=0){
@@ -26,19 +31,15 @@ public class Duck {
 			System.out.println(this.name + " is flying... The height is : "+ height);
 		}
 		
+	}
+
+	@Override
+	public void swim() {
+		System.out.println(this.name+ " is swimming...");
 		
 	}
 	
-	public void cuack() {
-		System.out.println(this.name + " is saying CUACK...");
-		
-		
-	}
-	
-	public void swim () {
-		System.out.println(this.name + " is swimming...");
-		
-	}
+
 	
 	
 	
