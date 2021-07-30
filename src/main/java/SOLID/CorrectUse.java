@@ -10,6 +10,8 @@ public class CorrectUse {
 	private int 
 		b;
 	
+	private HashMap sdaigja;
+	
 	public CorrectUse() {
 		
 		
