@@ -1,11 +1,11 @@
-package S;
+package SOLID;
 
 import java.util.ArrayList;
 
-import S.CorrectUse.Circle;
-import S.CorrectUse.Rectangle;
-import S.CorrectUse.Shape;
-import S.CorrectUse.ShapeDetails;
+import SOLID.CorrectUse.Circle;
+import SOLID.CorrectUse.Rectangle;
+import SOLID.CorrectUse.Shape;
+import SOLID.CorrectUse.ShapeDetails;
 
 public class IncorrectUse {
 	
